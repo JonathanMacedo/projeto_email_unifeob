@@ -191,12 +191,12 @@ app.get("/api/health", (req, res) => {
 // ===================================================================
 // INICIALIZAÇÃO DO SERVIDOR
 // ===================================================================
-app.listen(PORT, () => {
-  console.log("╔══════════════════════════════════════════════════════╗");
-  console.log("║         PhishGuard API - Sistema Iniciado           ║");
-  console.log("╚══════════════════════════════════════════════════════╝");
-  console.log(`🚀 Servidor rodando em: http://localhost:${PORT}`);
-  console.log(`📊 Health Check: http://localhost:${PORT}/api/health`);
-  console.log(`🔒 Cliente: Anizio Cesar Porfirio Macedo`);
-  console.log("═══════════════════════════════════════════════════════");
-});
+// Substitua a parte do app.listen por isso:
+if (require.main === module) {
+  app.listen(3000, () => {
+    console.log("Servidor rodando localmente na porta 3000");
+  });
+}
+
+// Isso é obrigatório para a Vercel:
+module.exports = app;
