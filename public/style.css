@@ -1,0 +1,623 @@
+/* ===================================================================
+   PhishGuard - Estilos Globais
+   Design Corporativo - Paleta Azul Escuro e Cinza
+   =================================================================== */
+
+/* Reset e Configurações Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Paleta de Cores Corporativa */
+  --primary-blue: #1a3a52;
+  --secondary-blue: #2c5f8d;
+  --accent-blue: #3498db;
+  --light-blue: #5dade2;
+
+  --dark-gray: #2c3e50;
+  --medium-gray: #7f8c8d;
+  --light-gray: #bdc3c7;
+  --background-gray: #ecf0f1;
+  --white: #ffffff;
+
+  /* Cores de Risco */
+  --risk-high: #e74c3c;
+  --risk-high-light: #fadbd8;
+  --risk-medium: #f39c12;
+  --risk-medium-light: #fdebd0;
+  --risk-low: #27ae60;
+  --risk-low-light: #d5f4e6;
+
+  /* Sombras */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+  /* Transições */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--background-gray) 0%, #d5dbdb 100%);
+  color: var(--dark-gray);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ===================================================================
+   Container Principal
+   =================================================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+/* ===================================================================
+   Header
+   =================================================================== */
+.header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-blue) 0%,
+    var(--secondary-blue) 100%
+  );
+  color: var(--white);
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-icon {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.logo-text h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: -0.5px;
+}
+
+.tagline {
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.company-info {
+  text-align: right;
+}
+
+.company-name {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.company-client {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ===================================================================
+   Info Banner
+   =================================================================== */
+.info-banner {
+  background: var(--accent-blue);
+  color: var(--white);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.info-icon {
+  font-size: 24px;
+}
+
+/* ===================================================================
+   Main Content
+   =================================================================== */
+.main-content {
+  padding: 40px;
+}
+
+.analysis-card,
+.result-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+.section-title {
+  font-size: 24px;
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.section-description {
+  color: var(--medium-gray);
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+/* ===================================================================
+   Formulário
+   =================================================================== */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.required {
+  color: var(--risk-high);
+}
+
+.email-input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid var(--light-gray);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: "Courier New", monospace;
+  resize: vertical;
+  transition: border-color var(--transition-fast);
+  background: #fafafa;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  background: var(--white);
+}
+
+.char-counter {
+  text-align: right;
+  font-size: 12px;
+  color: var(--medium-gray);
+  margin-top: 5px;
+}
+
+/* ===================================================================
+   Botões
+   =================================================================== */
+.btn-analyze,
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-analyze {
+  background: linear-gradient(
+    135deg,
+    var(--secondary-blue) 0%,
+    var(--accent-blue) 100%
+  );
+  color: var(--white);
+}
+
+.btn-analyze:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-analyze:active {
+  transform: translateY(0);
+}
+
+.btn-analyze:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: var(--light-gray);
+  color: var(--dark-gray);
+  margin-top: 20px;
+}
+
+.btn-secondary:hover {
+  background: var(--medium-gray);
+  color: var(--white);
+}
+
+.btn-icon {
+  font-size: 20px;
+}
+
+/* ===================================================================
+   Loading Indicator
+   =================================================================== */
+.loading-indicator {
+  text-align: center;
+  padding: 30px;
+  color: var(--medium-gray);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+  border: 4px solid var(--light-gray);
+  border-top: 4px solid var(--accent-blue);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===================================================================
+   Resultado da Análise
+   =================================================================== */
+.result-card {
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-content {
+  margin-top: 20px;
+}
+
+/* Badge de Risco */
+.risk-badge-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.risk-badge {
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.risk-label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+
+.risk-level {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Classes de Risco */
+.risk-badge.high {
+  background: var(--risk-high-light);
+  color: var(--risk-high);
+  border: 2px solid var(--risk-high);
+}
+
+.risk-badge.medium {
+  background: var(--risk-medium-light);
+  color: var(--risk-medium);
+  border: 2px solid var(--risk-medium);
+}
+
+.risk-badge.low {
+  background: var(--risk-low-light);
+  color: var(--risk-low);
+  border: 2px solid var(--risk-low);
+}
+
+/* Score Container */
+.score-container {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.score-label {
+  font-size: 14px;
+  color: var(--medium-gray);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.score-value-wrapper {
+  margin-bottom: 15px;
+}
+
+.score-value {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.score-max {
+  font-size: 24px;
+  color: var(--medium-gray);
+}
+
+.score-bar {
+  width: 100%;
+  height: 12px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.score-bar-fill {
+  height: 100%;
+  transition: width 0.8s ease, background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+.score-bar-fill.high {
+  background: var(--risk-high);
+}
+
+.score-bar-fill.medium {
+  background: var(--risk-medium);
+}
+
+.score-bar-fill.low {
+  background: var(--risk-low);
+}
+
+/* Mensagem */
+.message-container {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  background: #f8f9fa;
+  border-left: 4px solid var(--accent-blue);
+}
+
+.message-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.result-message {
+  flex: 1;
+  line-height: 1.8;
+  color: var(--dark-gray);
+}
+
+/* Flags */
+.flags-container {
+  margin-bottom: 25px;
+}
+
+.flags-title {
+  font-size: 16px;
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.flags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flag-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 15px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--dark-gray);
+}
+
+.flag-icon {
+  font-size: 16px;
+}
+
+/* Recomendações */
+.recommendations {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-blue);
+}
+
+.recommendations-title {
+  font-size: 16px;
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.recommendations-list {
+  list-style: none;
+}
+
+.recommendations-list li {
+  padding: 8px 0 8px 25px;
+  position: relative;
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+.recommendations-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent-blue);
+  font-weight: bold;
+}
+
+/* ===================================================================
+   Footer
+   =================================================================== */
+.footer {
+  background: var(--dark-gray);
+  color: var(--white);
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-client {
+  font-weight: 600;
+  color: var(--light-blue);
+}
+
+.footer-warning {
+  margin-top: 15px;
+  font-size: 12px;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* ===================================================================
+   Responsividade
+   =================================================================== */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .header {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .company-info {
+    text-align: center;
+  }
+
+  .info-banner {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .analysis-card,
+  .result-card {
+    padding: 20px;
+  }
+
+  .logo-text h1 {
+    font-size: 24px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .risk-level {
+    font-size: 24px;
+  }
+
+  .score-value {
+    font-size: 36px;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .email-input {
+    font-size: 12px;
+  }
+
+  .btn-analyze,
+  .btn-secondary {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  .message-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PhishGuard - Sistema de Detecção de Phishing para Anizio Cesar Porfirio Macedo"
+    />
+    <title>PhishGuard - Segurança Digital</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Container Principal -->
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="logo-section">
+          <div class="logo-icon">🛡️</div>
+          <div class="logo-text">
+            <h1>PhishGuard</h1>
+            <p class="tagline">Segurança Digital</p>
+          </div>
+        </div>
+        <div class="company-info">
+          <p class="company-name">Ambiente Seguro</p>
+          <p class="company-client">Anizio Cesar Porfirio Macedo</p>
+        </div>
+      </header>
+
+      <!-- Seção de Informações -->
+      <section class="info-banner">
+        <div class="info-item">
+          <span class="info-icon">🔍</span>
+          <span class="info-text">Análise Inteligente</span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">⚡</span>
+          <span class="info-text">Resultados Instantâneos</span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">🔒</span>
+          <span class="info-text">Dados Protegidos</span>
+        </div>
+      </section>
+
+      <!-- Formulário de Análise -->
+      <main class="main-content">
+        <div class="analysis-card">
+          <h2 class="section-title">Análise de E-mail</h2>
+          <p class="section-description">
+            Cole o conteúdo completo do e-mail suspeito no campo abaixo. Nossa
+            inteligência artificial irá analisar e identificar possíveis ameaças
+            de phishing.
+          </p>
+
+          <div class="form-group">
+            <label for="emailInput" class="form-label">
+              Conteúdo do E-mail
+              <span class="required">*</span>
+            </label>
+            <textarea
+              id="emailInput"
+              class="email-input"
+              placeholder="Cole aqui o texto completo do e-mail que deseja analisar...&#10;&#10;Exemplo:&#10;Assunto: Urgente - Sua conta será bloqueada&#10;&#10;Prezado cliente,&#10;Detectamos atividade suspeita em sua conta. Por favor, clique aqui para verificar seus dados imediatamente..."
+              rows="12"
+              maxlength="10000"
+            ></textarea>
+            <div class="char-counter">
+              <span id="charCount">0</span> / 10.000 caracteres
+            </div>
+          </div>
+
+          <button id="analyzeBtn" class="btn-analyze">
+            <span class="btn-icon">🔍</span>
+            <span class="btn-text">Analisar E-mail</span>
+          </button>
+
+          <!-- Loading Indicator -->
+          <div
+            id="loadingIndicator"
+            class="loading-indicator"
+            style="display: none"
+          >
+            <div class="spinner"></div>
+            <p>Analisando e-mail... Por favor, aguarde.</p>
+          </div>
+        </div>
+
+        <!-- Resultado da Análise -->
+        <div id="resultCard" class="result-card" style="display: none">
+          <h2 class="section-title">Resultado da Análise</h2>
+
+          <div id="resultContent" class="result-content">
+            <!-- Nível de Risco -->
+            <div class="risk-badge-container">
+              <div id="riskBadge" class="risk-badge">
+                <span class="risk-label">Nível de Risco</span>
+                <span id="riskLevel" class="risk-level">--</span>
+              </div>
+            </div>
+
+            <!-- Score -->
+            <div class="score-container">
+              <div class="score-label">Pontuação de Risco</div>
+              <div class="score-value-wrapper">
+                <span id="scoreValue" class="score-value">0</span>
+                <span class="score-max">/100</span>
+              </div>
+              <div class="score-bar">
+                <div
+                  id="scoreBarFill"
+                  class="score-bar-fill"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Mensagem -->
+            <div class="message-container">
+              <div class="message-icon" id="messageIcon">ℹ️</div>
+              <p id="resultMessage" class="result-message"></p>
+            </div>
+
+            <!-- Flags Detectadas -->
+            <div class="flags-container">
+              <h3 class="flags-title">Indicadores Detectados</h3>
+              <div id="flagsList" class="flags-list"></div>
+            </div>
+
+            <!-- Ações Recomendadas -->
+            <div class="recommendations">
+              <h3 class="recommendations-title">Ações Recomendadas</h3>
+              <ul id="recommendationsList" class="recommendations-list"></ul>
+            </div>
+          </div>
+
+          <!-- Botão Nova Análise -->
+          <button id="newAnalysisBtn" class="btn-secondary">
+            <span class="btn-icon">🔄</span>
+            <span class="btn-text">Nova Análise</span>
+          </button>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>&copy; 2025 PhishGuard - Sistema de Detecção de Phishing</p>
+        <p class="footer-client">
+          Desenvolvido para: Anizio Cesar Porfirio Macedo (Varejo)
+        </p>
+        <p class="footer-warning">
+          ⚠️ Este sistema é apenas uma ferramenta auxiliar. Sempre consulte o
+          setor de TI em caso de dúvidas.
+        </p>
+      </footer>
+    </div>
+
+    <!-- Script Principal -->
+    <script src="app.js"></script>
+  </body>
+</html>
