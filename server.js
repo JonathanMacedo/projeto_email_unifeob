@@ -1,7 +1,6 @@
 // ===================================================================
 // PhishGuard - API Backend
 // Cliente: Anizio Cesar Porfirio Macedo (Varejo)
-// Desenvolvido por: Arquiteto de Software Senior
 // ===================================================================
 
 const express = require("express");
@@ -31,18 +30,6 @@ app.post("/api/analyze", (req, res) => {
       });
     }
 
-    // ===============================================================
-    // LÓGICA MOCK DE SIMULAÇÃO (SUBSTITUIR FUTURAMENTE)
-    // ===============================================================
-    // TODO: Substituir esta lógica por chamada real à OpenAI API
-    // Exemplo de integração futura:
-    // const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-    // const response = await openai.chat.completions.create({
-    //     model: "gpt-4",
-    //     messages: [{ role: "user", content: `Analise este email...` }]
-    // });
-    // ===============================================================
-
     const result = analyzeEmailMock(emailText);
 
     // Retorna o resultado da análise
@@ -56,9 +43,6 @@ app.post("/api/analyze", (req, res) => {
   }
 });
 
-// ===================================================================
-// FUNÇÃO MOCK DE ANÁLISE (Simulação de IA)
-// ===================================================================
 function analyzeEmailMock(emailText) {
   const textLower = emailText.toLowerCase();
 
