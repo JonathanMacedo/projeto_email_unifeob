@@ -78,7 +78,7 @@ phishguard/
 Para rodar o **PhishGuard** em sua máquina local, você precisará ter o [Node.js](https://nodejs.org/) instalado. Siga os passos abaixo:
 
 ```
-git clone [https://github.com/seu-usuario/phishguard.git](https://github.com/seu-usuario/phishguard.git)
+git clone [https://github.com/JonathanMacedo/projeto_email_unifeob]
 cd phishguard
 npm install
 npm start
