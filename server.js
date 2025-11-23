@@ -141,7 +141,7 @@ if (require.main === module) {
     console.log("║         PhishGuard API - Sistema Iniciado           ║");
     console.log("╚══════════════════════════════════════════════════════╝");
     console.log(`🚀 Servidor rodando em: http://localhost:${PORT}`);
-    console.log(`🤖 Integração IA: ATIVADA (Gemini 1.5 Flash)`);
+    console.log(`🤖 Integração IA: ATIVADA (OpenAI GPT-4o-mini)`);
     console.log("═══════════════════════════════════════════════════════");
   });
 }

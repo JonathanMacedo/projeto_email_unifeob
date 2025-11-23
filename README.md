@@ -23,7 +23,7 @@
 
 O **PhishGuard** é uma aplicação web desenvolvida como requisito parcial para a conclusão do semestre letivo na **UNIFEOB**. O objetivo é prover uma camada de segurança da informação acessível para pequenas empresas.
 
-[cite_start]O projeto foi pilotado em parceria com a empresa **Anizio Cesar Porfirio Macedo**, atuante no setor de comércio varejista de hortifrutigranjeiros[cite: 9, 13, 50], visando proteger seus canais de comunicação digital contra fraudes.
+O projeto foi pilotado em parceria com a empresa **Anizio Cesar Porfirio Macedo**, atuante no setor de comércio varejista de hortifrutigranjeiros, visando proteger seus canais de comunicação digital contra fraudes.
 
 ## ⚠️ O Problema
 
@@ -78,8 +78,8 @@ phishguard/
 Para rodar o **PhishGuard** em sua máquina local, você precisará ter o [Node.js](https://nodejs.org/) instalado. Siga os passos abaixo:
 
 ```
-git clone [https://github.com/seu-usuario/phishguard.git](https://github.com/seu-usuario/phishguard.git)
-cd phishguard
+git clone https://github.com/JonathanMacedo/projeto_email_unifeob
+cd projeto_email_unifeob
 npm install
 npm start
 
